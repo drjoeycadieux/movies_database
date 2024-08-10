@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Database</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .movie-poster {
+            max-width: 200px;
+            margin: 10px;
+        }
+        .movie-item {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4 text-center">Movie Database</h1>
+        <form id="searchForm" class="mb-4">
+            <div class="form-group">
+                <input type="text" class="form-control" id="searchInput" placeholder="Search for movies">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <div id="moviesList" class="row"></div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
