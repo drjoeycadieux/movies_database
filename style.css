@@ -1,0 +1,202 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Add to styles.css */
+
+/* Header styles */
+.header {
+    background-color: #343a40;
+    padding: 20px 0;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #495057;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.nav-link.active:hover {
+    background-color: #0056b3;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.page-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.page-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.page-button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+/* Add to styles.css */
+
+/* Main content styles */
+.main-content {
+    padding: 20px 0;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+/* Add to styles.css */
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.movie {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.movie h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.play-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.play-button:hover {
+    background-color: #218838;
+}
+/* styles.css */
+
+/* General button styles */
+.load-more {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    padding: 12px 24px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Button text size */
+    margin: 20px auto; /* Center the button horizontally */
+    display: block; /* Block display for full-width button */
+    transition: background-color 0.3s ease; /* Smooth background-color transition */
+}
+
+/* Button hover effect */
+.load-more:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Button focus effect */
+.load-more:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Add custom focus shadow */
+}
+
+/* Button active state */
+.load-more:active {
+    background-color: #004080; /* Even darker blue when active */
+    transform: scale(0.98); /* Slightly shrink the button on click */
+}

@@ -1,8 +1,9 @@
 // script.js
 const apiKey = 'abfad8858b825b16ebc9e74b10395f51';
 let currentPage = 1;
+let totalPages = 1;
 let searchQuery = '';
-let currentCategory = ''; // Track the current category
+let currentCategory = 'home'; // Track the current category
 
 const endpoints = {
     home: `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=`,
@@ -33,6 +34,21 @@ document.getElementById('search-input').addEventListener('input', (e) => {
     loadContent('search');
 });
 
+// Handle pagination buttons
+document.getElementById('prev-page').addEventListener('click', () => {
+    if (currentPage > 1) {
+        currentPage--;
+        fetchMovies();
+    }
+});
+
+document.getElementById('next-page').addEventListener('click', () => {
+    if (currentPage < totalPages) {
+        currentPage++;
+        fetchMovies();
+    }
+});
+
 // Load content based on the selected page
 function loadContent(page) {
     currentCategory = page;
@@ -52,8 +68,10 @@ function fetchMovies() {
     fetch(url)
         .then(response => response.json())
         .then(data => {
+            totalPages = data.total_pages;
             const movies = data.results;
             displayMovies(movies);
+            updatePagination();
         })
         .catch(error => console.error('Error fetching movies:', error));
 }
@@ -75,8 +93,8 @@ function displayMovies(movies) {
     });
 }
 
-// Handle "Load More" button clicks
-document.getElementById('load-more').addEventListener('click', () => {
-    currentPage++;
-    fetchMovies();
-});
+function updatePagination() {
+    document.getElementById('page-info').textContent = `Page ${currentPage} of ${totalPages}`;
+    document.getElementById('prev-page').disabled = currentPage === 1;
+    document.getElementById('next-page').disabled = currentPage === totalPages;
+}

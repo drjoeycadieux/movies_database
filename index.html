@@ -1,35 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Database</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .movie-poster {
-            max-width: 200px;
-            margin: 10px;
-        }
-        .movie-item {
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1 class="my-4 text-center">Movie Database</h1>
-        <form id="searchForm" class="mb-4">
-            <div class="form-group">
-                <input type="text" class="form-control" id="searchInput" placeholder="Search for movies">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simple Movie Database</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header class="header">
+            <div class="container">
+                <h1 class="logo">Movie Database</h1>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="#" class="nav-link" data-page="home"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link" data-page="popular"
+                                >Popular</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link" data-page="top-rated"
+                                >Top Rated</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link" data-page="upcoming"
+                                >Upcoming</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <button type="submit" class="btn btn-primary">Search</button>
-        </form>
-        <div id="moviesList" class="row"></div>
-    </div>
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="./index.js"></script>
-</body>
+        </header>
+
+        <!-- Main Content Section -->
+        <div class="container">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search for movies..."
+                class="search-input"
+            />
+            <div id="main-content" class="main-content">
+                <!-- Dynamic content will be loaded here -->
+                <div id="movie-list" class="movie-list"></div>
+                <div id="pagination" class="pagination">
+                    <button id="prev-page" class="page-button" disabled>
+                        Previous
+                    </button>
+                    <span id="page-info"></span>
+                    <button id="next-page" class="page-button">Next</button>
+                </div>
+            </div>
+        </div>
+
+       <script src="dbstore.js"></script>
+        <script src="index.js"></script>
+    </body>
 </html>
