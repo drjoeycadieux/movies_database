@@ -92,9 +92,6 @@ body {
     background-color: #0056b3;
 }
 
-/* Add to styles.css */
-
-/* Main content styles */
 .main-content {
     padding: 20px 0;
 }
@@ -199,4 +196,15 @@ h1 {
 .load-more:active {
     background-color: #004080; /* Even darker blue when active */
     transform: scale(0.98); /* Slightly shrink the button on click */
+}
+
+.footerModule {
+    padding: 15px;
+    background-color: #343a40;
+}
+
+.footerModule p {
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
 }
