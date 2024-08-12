@@ -1,8 +1,7 @@
-// script.js
 const apiKey = 'abfad8858b825b16ebc9e74b10395f51';
 let currentPage = 1;
 let searchQuery = '';
-let currentCategory = ''; // Track the current category
+let currentCategory = '';
 
 const endpoints = {
     home: `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=`,
@@ -14,7 +13,7 @@ const endpoints = {
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', () => {
-    loadContent('home'); // Load home content by default
+    loadContent('home'); 
 });
 
 // Handle navigation clicks
@@ -29,7 +28,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 // Handle search input
 document.getElementById('search-input').addEventListener('input', (e) => {
     searchQuery = e.target.value;
-    currentPage = 1; // Reset to the first page when searching
+    currentPage = 1;
     loadContent('search');
 });
 
