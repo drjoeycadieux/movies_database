@@ -6,9 +6,7 @@ body {
     padding: 0;
 }
 
-/* Add to styles.css */
 
-/* Header styles */
 .header {
     background-color: #343a40;
     padding: 20px 0;
@@ -102,7 +100,6 @@ body {
     gap: 20px;
     justify-content: center;
 }
-/* Add to styles.css */
 
 .search-input {
     width: 100%;
@@ -165,9 +162,6 @@ h1 {
 .play-button:hover {
     background-color: #218838;
 }
-/* styles.css */
-
-/* General button styles */
 .load-more {
     background-color: #007bff; /* Button background color */
     color: white; /* Button text color */
