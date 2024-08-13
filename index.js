@@ -32,11 +32,11 @@ document.getElementById('search-input').addEventListener('input', (e) => {
     loadContent('search');
 });
 
-// Load content based on the selected page
+
 function loadContent(page) {
     currentCategory = page;
     currentPage = 1;
-    document.getElementById('movie-list').innerHTML = ''; // Clear previous results
+    document.getElementById('movie-list').innerHTML = '';
     fetchMovies();
 }
 
